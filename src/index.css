@@ -1,0 +1,25 @@
+@import url(https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap);
+* {
+  margin: 0;
+}
+
+:root {
+  --button-border: #96969680;
+  --page-base: #f0f8ff;
+  --text: #606f7b;
+  --white: #ffffff;
+  --black: hsl(240, 16%, 16%);
+  --inc-600: hsla(207, 12%, 43%, 0.8);
+  --inc-900: var(--black);
+}
+
+body {
+  background: var(--page-base);
+  min-height: 100vh;
+  font-family: "Inter", sans-serif;
+  color: var(--text);
+}
+button {
+  transition: 0.2s all ease-in;
+  cursor: pointer;
+}

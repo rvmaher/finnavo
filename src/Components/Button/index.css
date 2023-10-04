@@ -1,0 +1,14 @@
+button {
+  padding: 10px 8px;
+  border: 1px solid var(--button-border);
+  border-radius: 6px;
+  background: transparent;
+  color: var(--ink-600);
+  font-weight: 400;
+  font-size: 14px;
+}
+
+button:hover {
+  background-color: white;
+  color: blue;
+}
