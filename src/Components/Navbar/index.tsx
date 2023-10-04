@@ -1,7 +1,7 @@
 import React from "react";
 import "./index.css";
 import Button from "../Button";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
 function Navbar() {
   const { handleUser, isAuthenticated } = useAuth();
@@ -16,12 +16,12 @@ function Navbar() {
         {!isAuthenticated ? (
           <>
             <Button
-              onClick={(v) => {
+              onClick={() => {
                 handleUser("r");
               }}
               btnText="Login"
             />
-            <Button onClick={(v) => {}} btnText="Get Free Account" />
+            <Button onClick={() => {}} btnText="Get Free Account" />
           </>
         ) : (
           <Button

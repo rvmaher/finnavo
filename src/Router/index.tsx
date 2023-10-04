@@ -10,8 +10,8 @@ export default function Router() {
       <Routes>
         <Route path="/" element={<SharedLayout />}>
           <Route index element={<Home />} />
-          <Route path="screens" element={Screen("screens")} />
-          <Route path="tools" element={Screen("tools")} />
+          <Route path="screens" element={Screen("Screens")} />
+          <Route path="tools" element={Screen("Tools")} />
           <Route path="detail/:id" element={<Detail />} />
           <Route path="*" element={<div>No Path Found</div>} />
         </Route>
@@ -21,5 +21,16 @@ export default function Router() {
 }
 
 const Screen = (screen: string) => {
-  return <div>{screen}</div>;
+  return (
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        minHeight: "90vh",
+        placeItems: "center",
+      }}
+    >
+      {screen}
+    </div>
+  );
 };
