@@ -3,6 +3,12 @@
   margin: 0;
 }
 
+@media only screen and (max-width: 600px) {
+  * {
+    padding: 5px;
+  }
+}
+
 :root {
   --button-border: #96969680;
   --page-base: #f0f8ff;

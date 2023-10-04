@@ -16,7 +16,7 @@
 .inputBox {
   border-radius: 6px;
   border: 1px solid var(--button-border);
-  width: 30%;
+  min-width: 30%;
   padding: 12px;
   font-size: 16px;
   background-color: var(--white);
