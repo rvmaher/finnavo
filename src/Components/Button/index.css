@@ -7,6 +7,11 @@ button {
   font-weight: 400;
   font-size: 14px;
 }
+Link {
+  all: unset;
+  text-transform: none;
+  text-decoration: none;
+}
 
 button:hover {
   background-color: white;

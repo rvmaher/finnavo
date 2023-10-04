@@ -1,14 +1,13 @@
 import React from "react";
-import Home from "./Pages/Home";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Router from "./Router";
+import { AuthProvider } from "./Components/Context/AuthContext";
 
-export default function App() {
+function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="*" element={<div>No Path Found</div>} />
-      </Routes>
-    </BrowserRouter>
+    <AuthProvider>
+      <Router />
+    </AuthProvider>
   );
 }
+
+export default App;
