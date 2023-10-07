@@ -1,0 +1,87 @@
+.detailContainer {
+  padding: 20px;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+}
+h1,
+h3{
+  font-weight: 600;
+  color: var(--black);
+}
+
+.topContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.btnContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cardContainer {
+  background-color: var(--white);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: 10px;
+  border: 1px solid var(--button-border);
+}
+
+.cardContainer p {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--inc-600);
+}
+
+.cardContainer .updatedOn {
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #212529;
+}
+
+.gridContainer {
+  /* width: 100%; */
+  max-width: 100%;
+  display: flex;
+  gap: 10px;
+  /* align-items: flex-start; */
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.grid {
+  display: flex;
+  justify-content: space-between;
+  min-width: 30%;
+  max-width: 30%;
+  padding: 8px;
+  border-radius: 8px;
+  align-items: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .grid {
+    min-width: 100%;
+  }
+}
+.grid .meta {
+  font-size: 11px;
+  color: var(--black);
+}
+
+.grid .info {
+  font-size: 11px;
+  font-weight: 800;
+  text-align: end;
+  color: var(--black);
+}
+
+.grid2 {
+  background: var(--stripes);
+}

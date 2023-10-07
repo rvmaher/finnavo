@@ -1,6 +1,5 @@
 import React from "react";
 import "./Home.css";
-import Navbar from "../Components/Navbar";
 import Button from "../Components/Button";
 import { categories } from "../constants/categories";
 import { useNavigate } from "react-router-dom";

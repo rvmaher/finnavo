@@ -11,8 +11,10 @@
 
 :root {
   --button-border: #96969680;
+  --button-primary: hsl(229 93% 67% / 1);
   --page-base: #f0f8ff;
   --text: #606f7b;
+  --stripes: hsl(245, 40%, 98%);
   --white: #ffffff;
   --black: hsl(240, 16%, 16%);
   --inc-600: hsla(207, 12%, 43%, 0.8);
