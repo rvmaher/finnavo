@@ -69,7 +69,9 @@ const StripedTable = () => {
               {Array(13)
                 .fill("")
                 .map((_, idx) => (
-                  <td>{((idx + 20) * Math.random()).toFixed(0) + 20}</td>
+                  <td key={idx}>
+                    {((idx + 20) * Math.random()).toFixed(0) + 20}
+                  </td>
                 ))}
             </tr>
           )}
@@ -167,7 +169,7 @@ const StripedTable = () => {
             <td>21%</td>
           </tr>
           <tr>
-            <td className="left-cell">Other Income +</td>
+            <td className="left-cell">Other Income</td>
             <td>13</td>
             <td>23</td>
             <td>15</td>

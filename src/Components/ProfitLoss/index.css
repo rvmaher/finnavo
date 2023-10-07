@@ -29,10 +29,16 @@
 }
 
 .expand-icon {
-  color: #007bff; /* Blue color for the plus icon */
+  font-size: 18px;
+  cursor: pointer;
+  color: var(--button-primary); /* Blue color for the plus icon */
 }
 
 /* Add styles for expanded rows */
 .striped-table .expanded {
   background-color: transparent; /* Remove background color for expanded rows */
+}
+
+.sub-row {
+  background-color: var(--page-base) !important;
 }

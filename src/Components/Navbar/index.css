@@ -1,7 +1,11 @@
 .navbarContainer {
-  max-width: 90%;
-  padding-top: 8px;
+  position: sticky;
+  z-index: 1;
+  top: 0px;
+  max-width: 100%;
+  background-color: var(--page-base);
   margin: 0 auto;
+  padding: 10px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;

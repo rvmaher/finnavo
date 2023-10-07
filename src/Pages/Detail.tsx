@@ -14,7 +14,7 @@ function Detail() {
         <div className="topContainer">
           <div>
             <h1>{id?.toUpperCase()}</h1>
-            <p className="updatedOn">Last updated on</p>
+            <p className="updatedOn">Last updated on : 08/10/2023</p>
           </div>
           <div className="btnContainer">
             <BlueButton btnText="+ Watchlist" />
