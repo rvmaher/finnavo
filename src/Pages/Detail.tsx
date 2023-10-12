@@ -45,7 +45,7 @@ function Detail() {
         <div className="topContainer">
           <div>
             <h1>Profit & Loss</h1>
-            <h3>Standalone Figures in Rs. Crores </h3>
+            <h3>Standalone Figures in Rs. Crores</h3>
           </div>
           <div className="btnContainer">
             <BlueButton btnText="Product Segments" />

@@ -29,9 +29,9 @@ const Card = ({ text }: { text: string }) => {
   return (
     <div className="cardCon">
       <h4>{text}</h4>
-      {Object.entries(obj).map(([k, v]) => (
-        <div className="innerCon">
-          <p key={k}>{k}</p>
+      {Object.entries(obj).map(([k, v], idx) => (
+        <div key={v} className="innerCon">
+          <p>{k}</p>
           <p className="info">{v}</p>
         </div>
       ))}

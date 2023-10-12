@@ -1,40 +1,25 @@
 import React from "react";
 import { createContext, useEffect, useState } from "react";
-
+import { auth } from "../../../firebaseConfig";
+import { User } from "firebase/auth";
 type AuthContextType = {
-  user: string;
-  handleUser: (v: string) => void;
-  isAuthenticated: boolean;
+  user: User | null;
 };
 
 const AuthContext = createContext<AuthContextType>({} as AuthContextType);
 
 const AuthProvider = ({ children }: { children: JSX.Element }) => {
-  const [user, setUser] = useState<string>("");
-
-  const isAuthenticated = React.useMemo(() => {
-    return !!user;
-  }, [user]);
-
-  const handleUser = (v: string) => {
-    localStorage.setItem("user", v);
-    setUser(v);
-  };
-
-  const getUser = () => {
-    const _user = localStorage.getItem("user");
-    if (_user) {
-      setUser(_user);
-    }
-  };
+  const [user, setUser] = useState<User | null>(null);
+  console.log(user, "user");
   useEffect(() => {
-    getUser();
-  }, []);
+    const unsubscribe = auth.onAuthStateChanged((state) => {
+      setUser(state);
+    });
+    return unsubscribe;
+  });
 
   return (
-    <AuthContext.Provider value={{ handleUser, user, isAuthenticated }}>
-      {children}
-    </AuthContext.Provider>
+    <AuthContext.Provider value={{ user }}>{children}</AuthContext.Provider>
   );
 };
 

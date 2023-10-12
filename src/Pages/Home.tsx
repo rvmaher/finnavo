@@ -4,6 +4,13 @@ import Button from "../Components/Button";
 import { categories } from "../constants/categories";
 import { useNavigate } from "react-router-dom";
 function Home() {
+  console.log(import.meta.env.VITE_KEY);
+  console.log(import.meta.env.VITE_DOMAIN);
+  console.log(import.meta.env.VITE_PID);
+  console.log(import.meta.env.VITE_BUCKET);
+  console.log(import.meta.env.VITE_SENDER_ID);
+  console.log(import.meta.env.VITE_APPID);
+  console.log(import.meta.env.VITE_MEASUREMENT_ID);
   const navigate = useNavigate();
   return (
     <div>

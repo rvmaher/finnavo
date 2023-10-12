@@ -3,8 +3,19 @@ import "./index.css";
 import Button from "../Button";
 import { NavLink } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
+import { GoogleAuthProvider, signOut } from "firebase/auth";
+import { signInWithPopup } from "firebase/auth";
+import { auth } from "../../../firebaseConfig";
 function Navbar() {
-  const { handleUser, isAuthenticated } = useAuth();
+  const { user } = useAuth();
+  const googleProvider = new GoogleAuthProvider();
+
+  const SignIn = async () => {
+    await signInWithPopup(auth, googleProvider)
+      .then((res) => console.log(res))
+      .catch((err) => console.log(err.message));
+  };
+
   return (
     <div className="navbarContainer">
       <div className="btnContainer">
@@ -13,21 +24,19 @@ function Navbar() {
         <NavLink to="tools">Tools</NavLink>
       </div>
       <div className="loginContainer">
-        {!isAuthenticated ? (
+        {user == null ? (
           <>
-            <Button
-              onClick={() => {
-                handleUser("r");
-              }}
-              btnText="Login"
-            />
+            <Button onClick={SignIn} btnText="Login" />
             <Button onClick={() => {}} btnText="Get Free Account" />
           </>
         ) : (
           <Button
             btnText="Logout"
-            onClick={() => {
-              handleUser("");
+            onClick={async () => {
+              await auth
+                .signOut()
+                .then((res) => console.log(res, "this"))
+                .catch((err) => console.log(err));
             }}
           />
         )}
